@@ -68,7 +68,7 @@ CREATE TABLE `user` (
 --
 -- Dumping data for table `user`
 --
-
+  
 INSERT INTO `user` (`id`, `email`, `password`) VALUES
 (1, 'admin@apple.com', 'admin');
 
