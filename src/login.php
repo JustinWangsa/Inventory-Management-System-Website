@@ -6,4 +6,3 @@ $db = mysqli_connect('localhost',
 
 echo"blog";
 
-//kontol tin
