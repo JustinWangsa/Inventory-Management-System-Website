@@ -15,11 +15,11 @@
                                         <!---login blm buat -->
      <form class="login-form" action="./login.php" method="post">
 
-        <div class="mail">
+        <div class="Username">
 
-            <div class="email"> 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+            <div class="Username"> 
+                <label for="Username">Username:</label>
+                <input type="Username" id="Username" name="Username">
             </div>
 
             <div class="password"> 

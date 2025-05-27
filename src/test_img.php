@@ -26,7 +26,7 @@
 }
 ?>
 
-
+<!----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,12 +42,14 @@
         <button type="submit" name="submit">submit</button>
     </form>
     <div>
+
         <?php
             $res = mysqli_query($con, "select * from items");
             while($row = mysqli_fetch_assoc($res)){
             ?>
             <img src = "image/<?php echo $row["product_image"]; ?>" />
         <?php } ?>
+        
 </div>
 </body>
 </html>
