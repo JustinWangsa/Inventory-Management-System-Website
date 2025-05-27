@@ -61,13 +61,16 @@
                             <?php echo $count ?>
                         </th>
                         <th>
+                            <?php echo $row["product_image"] ?>
+                        </th>
+                        <th>
                             <?php echo $row["product_remarks"] ?>
                         </th>
                         <th>
                             <?php echo $row["product_code"] ?>
                         </th>
                         <th>
-                            <?php echo $row["product_code"] ?>
+                            <?php echo $row["product_quantity"] ?>
                         </th>
                     <?php
                         }
