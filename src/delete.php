@@ -3,7 +3,7 @@
     $db = mysqli_connect('localhost', 
                          'root', 
                          '', 
-                         'opensource-final');
+                         'inventory');
     if (mysqli_connect_errno()) {
         echo "Cant connect to MySQL:" . mysqli_connect_error();
     }
