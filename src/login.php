@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";       
-$password = "";           
-$dbname = "inventory";       
+$db = mysqli_connect('localhost', 
+                         'root', 
+                         '', 
+                         'inventory');
 
-
+echo"blog";
 
