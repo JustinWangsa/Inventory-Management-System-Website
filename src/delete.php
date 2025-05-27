@@ -8,6 +8,4 @@
         echo "Cant connect to MySQL:" . mysqli_connect_error();
     }
 
-    #TUNGGU BER
-    #get, delete, where, if success echo success;
 ?>
