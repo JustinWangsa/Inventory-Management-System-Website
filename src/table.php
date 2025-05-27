@@ -70,7 +70,7 @@
                             <?php echo $row["product_code"] ?>
                         </th>
                         <th>
-                            <?php echo $row["product_quantity"] ?>
+                            <?php echo $row["product_code"] ?>
                         </th>
                     <?php
                         }
