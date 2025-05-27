@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-    <!-- <form method="post" enctype=""></form> -->
-     
-    <!-- login page-->
-    <div class="login">
-                                        <!---login blm buat -->
-     <form class="login-form" action="./login.php" method="post">
 
-        <div class="Username">
+    <body>
+        <!-- <form method="post" enctype=""></form> -->
+        
+        <!-- login page-->
+        <div class="login">
+            <!---login blm buat. JANGAN LUPA GANTI TABLE to LOGIN (tunggu ber buat user id ) -->
+            <form class="login-form" action="./table.php" method="post">
 
-            <div class="Username"> 
-                <label for="Username">Username:</label>
-                <input type="Username" id="Username" name="Username">
-            </div>
+                <div class="Username">
 
-            <div class="password"> 
-                <label for="password">password:</label>
-                <input type="password" id="password" name="password">
-            </div>
+                    <div class="Username"> 
+                        <label for="Username">Username:</label>
+                        <input type="Username" id="Username" name="Username">
+                    </div>
 
-            <button class="login_btn"> log in </button>
+                    <div class="password"> 
+                        <label for="password">password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+
+                    <button class="login_btn"> log in </button>
+                
+                </div>
+            </form>
 
         </div>
-</div>
 
 
-</body>
+    </body>
 </html>
