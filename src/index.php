@@ -26,16 +26,16 @@
 
                         
                             <label for="name">Product image</label>
-                            <input type="file" class="form-control" name="product_image" required>
+                            <input type="file" name="product_image" required>
                         
                             <label for="name">Product remarks</label>
-                            <input type="text" class="form-control" name="product_remarks" required>
+                            <input type="text" name="product_remarks" required>
 
                             <label for="name">code</label>
-                            <input type="text" class="form-control" name="product_code" required>
+                            <input type="text" name="product_code" required>
 
                             <label for="name">Quantity</label>
-                            <input type="number" class="form-control" name="product_quantity" id="quant" min="1" max="" required>
+                            <input type="number" name="product_quantity" id="quant" min="1" max="" required>
 
                         <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button>
 

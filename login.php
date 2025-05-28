@@ -16,25 +16,28 @@
     <div class="right">
       <h2>TKUISA</h2>
       <p>Welcome!<br><small>Please enter your details below</small></p>
-      <form>
-        <label for="id">ID</label>
-        <input type="text" id="id" name="id" placeholder="Enter ID">
+
+      <form method="post" >
+        <label for="username">ID</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username" required/>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter Password">
+        <input type="password" id="password" name="password" placeholder="Enter Password" required/>
         
-          <a class="button" href="src/index.php">
-           LOGIN
-          </a>
+        <button class="button">LOGIN</button>
+
       </form>
+
+
     </div>
   </div>
 </body>
 </html>
 
-<?php 
-session_start();
+
+<?php
 include 'src/connect.php';
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -60,26 +63,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 }
 
-
 ?>
-<!--
-$db = mysqli_connect('localhost', 
-                         'root', 
-                         '', 
-                         'inventory');
-
-
-$username= $_POST['username'];
-$password = $_POST['password'];
-
-$sql = "select * from user where email = '$username' and password = '$password'";
-$result = mysqli_query($con, $sql);
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$count = mysqli_num_rows($result);
-
-if ($count == 1) {
-    require("./table.php");
-} else {
-    echo "<h1> Login Failed.</h1>";
-}
--->
