@@ -25,7 +25,7 @@
                     <form method="POST" class="form-inline" enctype="multipart/form-data" action="add.php">
 
                         
-                            <label for="name">Product iamge</label>
+                            <label for="name">Product image</label>
                             <input type="file" class="form-control" name="product_image" required>
                         
                             <label for="name">Product remarks</label>
