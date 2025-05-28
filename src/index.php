@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+<?php
+$db = mysqli_connect('localhost', 
+                         'root', 
+                         '', 
+                         'inventory');
 
 
-    <body>
-        <!-- <form method="post" enctype=""></form> -->
-        
-        <!-- login page-->
-        <div class="login">
-            <!---login blm buat. JANGAN LUPA GANTI TABLE to LOGIN (tunggu ber buat user id ) -->
-            <form class="login-form" action="./table.php" method="post">
+$username= $_POST['username'];
+$password = $_POST['password'];
 
-                <div class="Username">
+$sql = "select * from user where email = '$username' and password = '$password'";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$count = mysqli_num_rows($result);
 
-                    <div class="Username"> 
-                        <label for="Username">Username:</label>
-                        <input type="Username" id="Username" name="Username">
-                    </div>
-
-                    <div class="password"> 
-                        <label for="password">password:</label>
-                        <input type="password" id="password" name="password">
-                    </div>
-
-                    <button class="login_btn"> log in </button>
-                
-                </div>
-            </form>
-
-        </div>
-
-
-    </body>
-</html>
+if ($count == 1) {
+    require("./table.php");
+} else {
+    echo "<h1> Login Failed.</h1>";
+}
+?>
