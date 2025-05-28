@@ -1,49 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
-};
+    font-family: "Inter";
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #ffcd07;
+    margin: 0;
+    background-color: #f0f0eb;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     height: 100vh;
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    
-    background-color: #ffffff;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .left {
     flex: 1;
-    background-color: #f83c3c;
-    /* padding: 40px 20px; */
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .left img.logo {
-    width: 538px;
-    height: 538px;
+    width: 180px;
     margin-bottom: 30px;
+}
+
+.left h1 {
+    color: #7d0f0f;
+    font-size: 28px;
+    margin: 10px 0 5px;
+}
+
+.left p {
+    font-size: 14px;
+    color: #7d0f0f;
+    line-height: 1.5;
+}
+
+.divider {
+    margin: 30px auto 10px;
+    width: 60%;
+    height: 1px;
+    background-color: #7d0f0f;
+}
+
+.seal {
+    width: 30px;
+    margin: 10px auto 0;
 }
 
 .right {
     flex: 1;
-    background-color: #6D0001;
-    border-radius: 30px;
-    color: #ffffff;
-    padding: 15px ;
-    padding: 90px 45px;
+    background-color: #570000;
+    color: white;
+    padding: 60px 40px;
 }
 
- .right h2 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
+.right h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .right p {
