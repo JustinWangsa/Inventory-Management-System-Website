@@ -23,7 +23,7 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Password">
 
-        <button type="submit">LOGIN</button>
+        <button type="submit" action="index.php">LOGIN</button>
       </form>
     </div>
   </div>
