@@ -9,7 +9,7 @@
   <div class="container">
     <!-- Left Side -->
     <div class="left">
-      <img src="image/logo.png" alt="TKUISA Logo" class="logo">
+      <img src="src/image/logo.png" alt="TKUISA Logo" class="logo">
     </div>
 
     <!-- Right Side -->
@@ -22,8 +22,10 @@
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Password">
-
-        <button type="submit" action="index.php">LOGIN</button>
+        
+          <a class="button" href="src/index.php">
+           LOGIN
+          </a>
       </form>
     </div>
   </div>

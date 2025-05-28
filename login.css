@@ -2,7 +2,7 @@
 };
 
 body {
-    background-color: #EAE8E0;
+    background-color: #ffcd07;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,18 +12,17 @@ body {
 
 .container {
     display: flex;
-    width: 980px;
-    height: 645px;
-    border-radius: 30px;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    
     background-color: #ffffff;
 }
 
 .left {
     flex: 1;
-    background-color: #ffffff;
+    background-color: #f83c3c;
     /* padding: 40px 20px; */
-
 }
 
 .left img.logo {
@@ -35,7 +34,9 @@ body {
 .right {
     flex: 1;
     background-color: #6D0001;
+    border-radius: 30px;
     color: #ffffff;
+    padding: 15px ;
     padding: 90px 45px;
 }
 
@@ -66,17 +67,18 @@ input[type="password"] {
     font-size: 14px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
+
+.button {
     background-color: white;
+    width: 40rem;
+    padding: 10px;
     color: #570000;
     font-weight: bold;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-button:hover {
+.button:hover {
     background-color: #ddd;
 }
