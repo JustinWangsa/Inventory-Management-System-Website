@@ -22,7 +22,11 @@
                 </tr>
             
                 <body>
-                    <form method="POST" class="form-inline" action="add.php">
+                    <form method="POST" class="form-inline" enctype="multipart/form-data" action="add.php">
+
+                        
+                            <label for="name">Product iamge</label>
+                            <input type="file" class="form-control" name="product_image" required>
                         
                             <label for="name">Product remarks</label>
                             <input type="text" class="form-control" name="product_remarks" required>
@@ -61,7 +65,7 @@
                             <?php echo $count ?>
                         </th>
                         <th>
-                            <?php echo $row["product_image"] ?>
+                            <img src="image/<?php echo $row["product_image"]; ?>" width="80" alt="Image">
                         </th>
                         <th>
                             <?php echo $row["product_remarks"] ?>
@@ -70,7 +74,7 @@
                             <?php echo $row["product_code"] ?>
                         </th>
                         <th>
-                            <?php echo $row["product_code"] ?>
+                            <?php echo $row["product_quantity"] ?>
                         </th>
                     <?php
                         }
