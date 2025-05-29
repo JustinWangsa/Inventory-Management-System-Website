@@ -13,7 +13,7 @@
 
             <table>
 
-                <tr class="information">
+                <tr class="">
                     <th scope="col">Number</th>
                     <th scope="col">Image</th>
                     <th scope="col">Remarks</th>
@@ -22,7 +22,7 @@
                 </tr>
             
                 <body>
-                    <form method="POST" class="form-inline" enctype="multipart/form-data" action="add.php">
+                    <form method="POST" class="" enctype="multipart/form-data" action="add.php">
 
                         
                             <label for="name">Product image</label>
@@ -77,9 +77,18 @@
                             <?php echo $row["product_quantity"] ?>
                         </th>
                         <th>
-                            <a href="delete.php?id=<?php echo $row["id"] ?>">Delete</a>
-                            <!-- <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button> -->
+                            <button class=""
+                                onclick="window.location.href = 'delete.php?id=<?php echo $row["id"] ?>';">
+                                Delete
+                            </button>
                         </th>
+                        <th>
+                            <button class=""
+                                onclick="window.location.href = 'edit.php?id=<?php echo $row["id"] ?>';">
+                                Edit
+                            </button>
+                        </th>
+                        
                     <?php
                         }   
                     }
