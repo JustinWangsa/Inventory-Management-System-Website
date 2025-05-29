@@ -37,7 +37,7 @@
                             <label for="name">Quantity</label>
                             <input type="number" name="product_quantity" id="quant" min="1" max="" required>
 
-                        <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button>
+                        <button type="submit" class="" name="add">Add item</button>
 
                     </form>
                 </body>
@@ -81,7 +81,7 @@
                             <!-- <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button> -->
                         </th>
                     <?php
-                        }
+                        }   
                     }
                     ?>
 
