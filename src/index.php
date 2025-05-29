@@ -78,6 +78,7 @@
                         </th>
                         <th>
                             <a href="delete.php?id=<?php echo $row["id"] ?>">Delete</a>
+                            <!-- <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button> -->
                         </th>
                     <?php
                         }
