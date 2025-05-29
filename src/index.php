@@ -37,7 +37,7 @@
                             <label for="name">Quantity</label>
                             <input type="number" name="product_quantity" id="quant" min="1" max="" required>
 
-                        <button type="submit" class="btn btn-primary ms-3 mt-3" name="add">Add item</button>
+                        <button type="submit" class="" name="add">Add item</button>
 
                     </form>
                 </body>
@@ -77,10 +77,10 @@
                             <?php echo $row["product_quantity"] ?>
                         </th>
                         <th>
-                            <a href="delete.php?id=<?php echo $row["id"] ?>">Delete</a>
+                            <a href="delete.php? id= <?php echo $row["id"] ?>">Delete</a>
                         </th>
                     <?php
-                        }
+                        }   
                     }
                     ?>
 
