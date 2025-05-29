@@ -76,6 +76,9 @@
                         <th>
                             <?php echo $row["product_quantity"] ?>
                         </th>
+                        <th>
+                            <a href="delete.php?id=<?php echo $row["id"] ?>">Delete</a>
+                        </th>
                     <?php
                         }
                     }
