@@ -17,18 +17,15 @@
       <h2>TKUISA</h2>
       <p>Welcome!<br><small>Please enter your details below</small></p>
 
-      <form method="post" >
+      <form method="post">
         <label for="username">ID</label>
         <input type="text" id="username" name="username" placeholder="Enter Username" required/>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Password" required/>
-        
+        <p class="error">Wrong Password!</p>
         <button class="button">LOGIN</button>
-
       </form>
-
-
     </div>
   </div>
 </body>
@@ -62,5 +59,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         echo "<script>alert('Incorrect Username or Password');</script>";
     }
 }
-
 ?>
