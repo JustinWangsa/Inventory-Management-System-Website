@@ -70,34 +70,34 @@
 <body>
     <div class="container my-5">
         <h2>Edit Page</h2>
-        <form method="post">
+        <form method="post" class="" enctype="multipart/form-data" action="add.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Code</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="code" value="<?php echo $product_code; ?>">
+                    <input type="text" class="form-control" name="code" value="<?php echo $product_code; ?>"required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Remarks</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="remarks" value="<?php echo $product_remarks; ?>">
+                    <input type="text" class="form-control" name="remarks" value="<?php echo $product_remarks; ?>"required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Quantity</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="quantity" value="<?php echo $product_quantity; ?>">
+                    <input type="number" class="form-control" name="quantity" value="<?php echo $product_quantity; ?>" min="1" max="" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Image</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="image" value="<?php echo $product_image; ?>">
+                    <input type="file" class="form-control" name="image" value="<?php echo $product_image; ?>">
                 </div>
             </div>
 
