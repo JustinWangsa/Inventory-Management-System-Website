@@ -77,8 +77,8 @@
                             <?php echo $row["product_quantity"] ?>
                         </th>
                         <th>
-                            <button class=""
-                                onclick="window.location.href = 'delete.php?id=<?php echo $row["id"] ?>';">
+                            <button 
+                                onclick="if (confirm('Are you sure you want to delete this item?')) { window.location.href = 'delete.php?id=<?php echo $row['id']; ?>'; }">
                                 Delete
                             </button>
                         </th>

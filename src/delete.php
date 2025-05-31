@@ -7,10 +7,10 @@ if(isset($_GET['id'])){ // for check if ID is set
     if ($result == true){
         echo "<script>
                 alert('Successfully Deleted');
-                window.location.href = 'index.php';
             </script>"; 
-        exit();
         }
     }
+
+    require('index.php');
 ?>
 
