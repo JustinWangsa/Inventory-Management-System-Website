@@ -11,11 +11,11 @@
         if(!isset($_GET["id"])){
             header("location: index.php");
         }
-        $id = $_GET['id'];
+    $id = $_GET['id'];
 
-        $sql = "SELECT * FROM items WHERE id = $id";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT * FROM items WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 
         if (!$result) {
             die("Query failed: " . mysqli_error($conn));
@@ -26,38 +26,49 @@
             exit();
         }
 
-            $product_code = $row["product_code"] ?? '';
-            $product_remarks = $row["product_remarks"] ?? '';
-            $product_quantity = $row["product_quantity"] ?? '';
-            $product_image = $row["product_image"] ?? '';
+    $product_code = $row["product_code"] ?? '';
+    $product_remarks = $row["product_remarks"] ?? '';
+    $product_quantity = $row["product_quantity"] ?? '';
+    $product_image = $row["product_image"] ?? '';
 
     }else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST["id"];
-            $product_code = $_POST["code"];
-            $product_remarks = $_POST["remarks"];
-            $product_quantity = $_POST["quantity"];
-            $product_image = $_POST["image"];
+        
+    $id = $_POST["id"];
+    $product_code = $_POST["code"];
+    $product_remarks = $_POST["remarks"];
+    $product_quantity = $_POST["quantity"];
 
-        do{
-            $sql = "UPDATE items 
+    $sql = "SELECT product_image FROM items WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $product_image = $row['product_image'];
+
+        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+            $imageName = $_FILES['image']['name'];
+            $imageTmp = $_FILES['image']['tmp_name'];
+            move_uploaded_file($imageTmp, 'image/' . $imageName);
+            $product_image = $imageName;
+        }
+
+    $sql = "UPDATE items 
             SET product_code = '$product_code', 
                 product_remarks = '$product_remarks', 
                 product_quantity = '$product_quantity', 
                 product_image = '$product_image' 
-                WHERE id = $id";
+            WHERE id = $id";
 
-            $result = mysqli_query($conn, $sql);
-            if(!$result){
-                break; // if invalid will terminate
-            }
+    $result = mysqli_query($conn, $sql);
 
-            header("location: index.php");
-            exit();
-        }while(false);
+    if ($result) {
+        header("location: index.php");
+        exit();
+    } else {
+        echo "Update failed: " . mysqli_error($conn);
     }
+}
     
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +81,7 @@
 <body>
     <div class="container my-5">
         <h2>Edit Page</h2>
-        <form method="post" class="" enctype="multipart/form-data" action="add.php">
+        <form method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
             <div class="row mb-3">
