@@ -4,39 +4,47 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inventory</title>
+        <title>TKUISA's Inventory</title>
+        <link href="style.css" rel="stylesheet">
     </head>
     
     <body>
-        <div class="side_bar">
-            <div class="side_top">
-                <img src="" alt="TKUISA LOGO">
-                <p>Inventory</p>
-                <p>Add Item</p>
-            </div>
-            <div class="side_bottom">
-                <p>coded and designed by</p>
-                <p>ASEP STROBERI</p>
-            </div>
-        </div>
-        <div class="main">
-            <div class="top_segment">
-                <div class="search_bar">
-                <input type="search" placeholder="Search for an item"/>
-                </div>
-                <button class="log_out">Log Out</button>
-            </div>
-            <table>
+        <div class="container">
 
-                <tr class="">
-                    <th scope="col">Number</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Remarks</th>
-                    <th scope="col">Code</th>
-                    <th scope="col">Quantity</th>
-                </tr>
-            
-                <body>
+            <div class="side_bar">
+
+                <div class="side_top">
+                    <img src="image/main_logo.png" alt="TKUISA LOGO">
+                    <p class="med_button">Inventory</p>
+                    <button class="med_button">Add Item</button>
+                </div>
+
+                <div class="side_bottom">
+                    <p id="side_bottom_upper">coded and designed by</p>
+                    <p id="Bold">ASEP STROBERI</p>
+                </div>
+
+            </div>
+
+            <div class="main">
+
+                <div class="top_segment">
+                    <div class="search_bar">
+                    <input type="search" placeholder="Search for an item"/>
+                    </div>
+                    <button class="log_out">Log Out</button>
+                </div>
+
+                <table>
+                    <tr class="">
+                        <th scope="col">Number</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Remarks</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </table>
+                <div class="popup">
                     <form method="POST" class="" enctype="multipart/form-data" action="add.php">
 
                         
@@ -55,26 +63,22 @@
                         <button type="submit" class="" name="add">Add item</button>
 
                     </form>
-                </body>
+                </div>
+                <?php
+                    include('connect.php');
+                ?>
 
-                <body>
-
-                    <?php
-                        include('connect.php');
-                    ?>
-
-                    
-                    <!-- row table function -->
-                    <?php 
-                
+                <!-- row table function -->
+                <?php 
                     $sql = "SELECT * FROM items"; 
                     $result = $conn->query($sql);
                     $count = 0;
                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) 
-                        {
+                        while ($row = $result->fetch_assoc()){
                             $count = $count + 1;
-                    ?>
+                ?>
+
+                <table>
                     <tr>
                         <th>
                             <?php echo $count ?>
@@ -103,60 +107,13 @@
                                 Edit
                             </button>
                         </th>
-                        
+                    </tr>    
                     <?php
                         }   
                     }
                     ?>
-
-
-                </body>
-                
-                
-
-            </table>
+                </table>
+            </div>
         </div>
     </body>
 </html>
-<!-- 
-        <div class="inventory_table">
-
-            <table>
-
-                <tr class="">
-                    <th scope="col">Number</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Remarks</th>
-                    <th scope="col">Code</th>
-                    <th scope="col">Quantity</th>
-                </tr>
-            
-                <body>
-                    <form method="POST" class="" enctype="multipart/form-data" action="add.php">
-
-                        
-                            <label for="name">Product image</label>
-                            <input type="file" name="product_image" required>
-                        
-                            <label for="name">Product remarks</label>
-                            <input type="text" name="product_remarks" required>
-
-                            <label for="name">code</label>
-                            <input type="text" name="product_code" required>
-
-                            <label for="name">Quantity</label>
-                            <input type="number" name="product_quantity" id="quant" min="1" max="" required>
-
-                        <button type="submit" class="" name="add">Add item</button>
-
-                    </form>
-                </body>
-
-                <body>
-
-                    
-                        include('connect.php');
-                    ?>
-
-                    
-                    <-- row table function -->
