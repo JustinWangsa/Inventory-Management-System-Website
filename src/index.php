@@ -8,9 +8,24 @@
     </head>
     
     <body>
-
-        <div class="inventory_table">
-
+        <div class="side_bar">
+            <div class="side_top">
+                <img src="" alt="TKUISA LOGO">
+                <p>Inventory</p>
+                <p>Add Item</p>
+            </div>
+            <div class="side_bottom">
+                <p>coded and designed by</p>
+                <p>ASEP STROBERI</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="top_segment">
+                <div class="search_bar">
+                <input type="search" placeholder="Search for an item"/>
+                </div>
+                <button class="log_out">Log Out</button>
+            </div>
             <table>
 
                 <tr class="">
@@ -84,7 +99,7 @@
                         </th>
                         <th>
                             <button class=""
-                                onclick="window.location.href = 'edit.php?id=<?php echo $row["id"] ?>';">
+                                onclick="window.location.href = 'edit.php?id=<?php echo $row['id'] ?>';">
                                 Edit
                             </button>
                         </th>
@@ -100,10 +115,48 @@
                 
 
             </table>
-
         </div>
-
-        
     </body>
-
 </html>
+<!-- 
+        <div class="inventory_table">
+
+            <table>
+
+                <tr class="">
+                    <th scope="col">Number</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Remarks</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            
+                <body>
+                    <form method="POST" class="" enctype="multipart/form-data" action="add.php">
+
+                        
+                            <label for="name">Product image</label>
+                            <input type="file" name="product_image" required>
+                        
+                            <label for="name">Product remarks</label>
+                            <input type="text" name="product_remarks" required>
+
+                            <label for="name">code</label>
+                            <input type="text" name="product_code" required>
+
+                            <label for="name">Quantity</label>
+                            <input type="number" name="product_quantity" id="quant" min="1" max="" required>
+
+                        <button type="submit" class="" name="add">Add item</button>
+
+                    </form>
+                </body>
+
+                <body>
+
+                    
+                        include('connect.php');
+                    ?>
+
+                    
+                    <-- row table function -->

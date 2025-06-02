@@ -88,14 +88,19 @@ input[type="text"] {
 }
 
 input[type="password"] {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
-form .error{
+.error {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.error p{
     color: #ffb3b3;
     font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 0;
     font-style: italic;
 }
 

@@ -23,7 +23,7 @@
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Password" required/>
-        <p class="error">Wrong Password!</p>
+        <p class="error" id="error-msg">Wrong Password!</p>
         <button class="button">LOGIN</button>
       </form>
     </div>
@@ -35,6 +35,7 @@
 <?php
 include 'src/connect.php';
 
+$error = false;
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -56,7 +57,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         header("Location: src/index.php");
         exit();
     } else {
-        echo "<script>alert('Incorrect Username or Password');</script>";
+      $error = true;
+        // echo "<script>alert('Incorrect Username or Password');</script>";
+      exit();
     }
 }
 ?>
