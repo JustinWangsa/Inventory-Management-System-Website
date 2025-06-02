@@ -23,6 +23,6 @@ if (isset($_POST['add'])) {
     }
 }
 
-require('./index.php');
+header("location: index.php");
 
 ?>
