@@ -30,7 +30,13 @@
 
                 <div class="top_segment">
                     <div class="search_bar">
-                    <input type="search" placeholder="Search for an item"/>
+                    <input type="search" id= "Search" placeholder="Search for an item" onkeyup="myFunction()"/>
+
+
+
+
+
+
                     </div>
                     <button class="log_out">Log Out</button>
                 </div>
@@ -45,7 +51,7 @@
                     </tr>
                 </table>
                 <div class="popup">
-                    <form method="POST" class="" enctype="multipart/form-data" action="add.php">
+                    <form method="POST" id= "Table" class="" enctype="multipart/form-data" action="add.php">
 
                         
                             <label for="name">Product image</label>
