@@ -251,12 +251,23 @@
 
                 <div class="top_segment">
                     <div class="search_bar">
+<<<<<<< HEAD
                         <span class="material-symbols-outlined">search</span>
                         <input class="search_input" type="search" placeholder="Search for an item"/>
+=======
+                    <input type="search" id= "Search" placeholder="Search for an item" onkeyup="myFunction()"/>
+
+
+
+
+
+
+>>>>>>> 75ecea568353b0d1214b9ed43b7108e9b32bc3b9
                     </div>
                     <button class="log_out">Log Out</button>
                 </div>
 
+<<<<<<< HEAD
                 <div class="bottom_segment">
                     <div id="card-title">
                         <p>Number</p>
@@ -265,6 +276,19 @@
                         <p>Code</p>
                         <p>Quantity</p>
                     </div>
+=======
+                <table>
+                    <tr class="">
+                        <th scope="col">Number</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Remarks</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </table>
+                <div class="popup">
+                    <form method="POST" id= "Table" class="" enctype="multipart/form-data" action="add.php">
+>>>>>>> 75ecea568353b0d1214b9ed43b7108e9b32bc3b9
 
 
                     <div class="popup" id="addPopup">
