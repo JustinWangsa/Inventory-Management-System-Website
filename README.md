@@ -10,7 +10,7 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
+
 <div align="center">
   <!-- <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -58,10 +58,10 @@ A web-based inventory management system for the TKUISA committee to organize and
 <!-- CONTACT -->
 ## Contact
 <ul>
-  <li>Justin Wangsa - [@Justinwangsa](https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com </li>
-  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
-  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
-  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+  <li>Justin Wangsa - (https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com </li>
+  <li>Seann Bryan Timotius - https://www.linkedin.com/in/seann-bryan-timotius/ - seannbryanlin@gmail.com </li>
+  <li>lorem ipsum dolor sit amet - lorem ipsum dolor sit amet - lorem ipsum dolor sit amet</li>
+  <li>lorem ipsum dolor sit amet - lorem ipsum dolor sit amet - lorem ipsum dolor sit amet</li>
 </ul>
 
 Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.com/JustinWangsa/opensource-final)
@@ -79,7 +79,7 @@ Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.
 [product-screenshot]: images/screenshot.png
 
 [php.js]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white
-[javascript.js]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white
+[javascript.js]: https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square
 [mariadb.js]: https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
 [html.js]: https://shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529
 [css.js]: https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white
