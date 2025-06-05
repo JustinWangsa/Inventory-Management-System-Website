@@ -6,7 +6,7 @@
 -->
 
 
-[![Contributors][contributors-shield][contributors-url]]
+[![Contributors][contributors-shield](contributors-url)]
 
 
 <!-- PROJECT LOGO -->
@@ -64,7 +64,7 @@ A web-based inventory management system for the TKUISA committee to organize and
   <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
 </ul>
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.com/JustinWangsa/opensource-final)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
