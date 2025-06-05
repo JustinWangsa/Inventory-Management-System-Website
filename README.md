@@ -44,11 +44,11 @@ A web-based inventory management system for the TKUISA committee to organize and
 
 ### Built With
 
-* [![HTML][html.js]]
-* [![CSS][css.js]]
-* [![PHP][php.js]]
-* [![Javascript][javascript.js]]
-* [![MariaDB][mariadb.js]]
+* ![HTML][html.js]
+* ![CSS][css.js]
+* ![PHP][php.js]
+* ![Javascript][javascript.js]
+* ![MariaDB][mariadb.js]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>  
@@ -57,12 +57,12 @@ A web-based inventory management system for the TKUISA committee to organize and
 
 <!-- CONTACT -->
 ## Contact
-
-Justin Wangsa - [@Justinwangsa](https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
+<ul>
+  <li>Justin Wangsa - [@Justinwangsa](https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+</ul>
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
