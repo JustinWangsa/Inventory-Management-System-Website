@@ -6,7 +6,7 @@
 -->
 
 
-[![Contributors][contributors-shield]][contribut  ors-url]
+![Contributors][contributors-shield][contributors-url]
 
 
 <!-- PROJECT LOGO -->
@@ -16,11 +16,11 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">README</h3>
+  <h4 align="center">README</h4>
 
-  <p align="center">
+  <h1 align="center">
     TKUISA Inventory System
-  </p>
+  </h1>
 </div>
 
 
