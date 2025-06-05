@@ -58,9 +58,9 @@ A web-based inventory management system for the TKUISA committee to organize and
 <!-- CONTACT -->
 ## Contact
 <ul>
-  <li>Justin Wangsa - (https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com </li>
+  <li>Justin Wangsa - https://www.linkedin.com/in/justinwangsa/ - justinwangsa9@gmail.com </li>
   <li>Seann Bryan Timotius - https://www.linkedin.com/in/seann-bryan-timotius/ - seannbryanlin@gmail.com </li>
-  <li>lorem ipsum dolor sit amet - lorem ipsum dolor sit amet - lorem ipsum dolor sit amet</li>
+  <li>Jeffta Matthew - https://www.linkedin.com/in/jefftamatthew/ - jeffta804@gmail.com</li>
   <li>lorem ipsum dolor sit amet - lorem ipsum dolor sit amet - lorem ipsum dolor sit amet</li>
 </ul>
 
