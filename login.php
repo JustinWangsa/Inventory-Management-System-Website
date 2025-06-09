@@ -25,7 +25,7 @@
         <input type="password" id="password" name="password" placeholder="Enter Password" required/>
 
         <?php if ($error): ?>
-        <p class="error" id="error-msg">Wrong Password!</p>
+          <p class="error" id="error-msg">Wrong Password!</p>
         <?php endif; ?>
         
         <button class="button">LOGIN</button>
