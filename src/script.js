@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const addPopup = document.getElementById("addPopup");
 const openPopupBtn = document.getElementById("addBtn");
 const closePopupBtn = document.getElementById("closePopupBtn");
@@ -66,25 +65,67 @@ form.addEventListener("submit", function (e) {
 
   reader.readAsDataURL(imageFile);
 });
-=======
-// jangan di ganti ganti - bet
 
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
+const editPopup = document.getElementById("editPopup");
+const closeEditPopupBtn = document.getElementById("closeEditPopupBtn");
+const cancelEditBtn = document.getElementById("cancelEditBtn");
+const editForm = document.getElementById("editForm");
+
+let currentEditRow = null;
+let currentImage = "";
+
+bottomSegment.addEventListener("click", function (e) {
+  if (e.target.classList.contains("edit-btn")) {
+    const row = e.target.closest("tr");
+    currentEditRow = row;
+
+    const cells = row.querySelectorAll("th");
+    currentImage = cells[1].querySelector("img").src;
+
+    document.getElementById("editName").value = cells[2].textContent;
+    document.getElementById("editCode").value = cells[3].textContent;
+    document.getElementById("editQuantity").value = cells[4].textContent;
+
+    editPopup.style.display = "block";
   }
-}
->>>>>>> 75ecea568353b0d1214b9ed43b7108e9b32bc3b9
+});
+
+closeEditPopupBtn.onclick = () => {
+  editPopup.style.display = "none";
+};
+
+cancelEditBtn.onclick = () => {
+  editPopup.style.display = "none";
+};
+
+window.onclick = (e) => {
+  if (e.target === editPopup) {
+    editPopup.style.display = "none";
+  }
+};
+
+editForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("editName").value;
+  const code = document.getElementById("editCode").value;
+  const quantity = document.getElementById("editQuantity").value;
+  const newImage = document.getElementById("editImage").files[0];
+
+  const updateRow = (imgSrc) => {
+    const cells = currentEditRow.querySelectorAll("th");
+    cells[1].querySelector("img").src = imgSrc;
+    cells[2].textContent = name;
+    cells[3].textContent = code;
+    cells[4].textContent = quantity;
+    editPopup.style.display = "none";
+  };
+
+  if (newImage) {
+    const reader = new FileReader();
+    reader.onload = (event) => updateRow(event.target.result);
+    reader.readAsDataURL(newImage);
+  } else {
+    updateRow(currentImage);
+  }
+});
