@@ -149,6 +149,67 @@
   </div>
 </div>
 
+    <!-- <section id="About" class="about">
+        <h2>About Us</h2>
+        <div class="main">
+            <img src="/image/wp4.jpg" alt="">
+            <div class="about-text">
+                <p>Welcome to our recipe playground where kitchen disasters turn into delicious masterpieces (eventually). Whether you're a seasoned chef or someone who just Googled "how to boil water," you're in the right place. We’ve got comfort food for your soul, fusion recipes to impress your date, and step-by-step guides so simple even your cat could follow (but please don’t let your cat cook). So grab your apron, pretend you're on a cooking show, and let’s whip up something amazing or at least edible. </p>
+            </div>
+        </div>
+    </section>
+    <div id="Recipes" class="recipe">
+        <h2>Featured Recipes</h2>
+        <div class="box">
+            
+            <div class="card">
+                <img src="/image/stinky_tofu_1.jpeg" alt="Stinky Tofu">
+                <div class="content">
+                    <h3>臭豆腐</h3>
+                    <P>臭豆腐 also known as "stinky tofu"</P>
+                    <button  onclick="window.location.href='HTML/recipe1.html'">View Recipe</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/image/popcorn_chicken.jpg" alt="popcorn chicken">
+                <div class="content">
+                    <h3>鹹酥雞</h3>
+                    <P>鹹酥雞 also known as "Popcorn Chicken"</P>
+                    <button onclick="window.location.href='HTML/bertrand.html'">View Recipe</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/image/jipai.jpg" alt="jipai">
+                <div class="content">
+                    <h3>雞排</h3>
+                    <P>雞排 also known as "Taiwanese Fried Chicken"</P>
+                    <button onclick="window.location.href='/HTML/recipe3.html'">View Recipe</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/image/yehu.jpg" alt="Sweet Potato Balls">
+                <div class="content">
+                    <h3>地瓜球</h3>
+                    <P>地瓜球 also known as "Sweet Potato Balls"</P>
+                    <button onclick="window.location.href='/HTML/yehuda.html'">View Recipe</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img class="jeffta" src="/image/jeffta.jpg" alt="">
+                <div class="content">
+                    <h3>蚵仔煎</h3>
+                    <P>蚵仔煎 also known as  "Oyster Omelette"</P>
+                    <button onclick="window.location.href='/HTML/jeffta.html'">View Recipe</button>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
   <script>
     const addPopup = document.getElementById("addPopup");
