@@ -5,6 +5,28 @@ const cancelBtn = document.getElementById("cancelBtn");
 const form = document.querySelector("form");
 const bottomSegment = document.querySelector(".bottom_segment");
 
+const editPopup = document.getElementById("editPopup");
+const closeEditPopupBtn = document.getElementById("closeEditPopupBtn");
+const cancelEditBtn = document.getElementById("cancelEditBtn");
+
+document.querySelectorAll(".editBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.getElementById("editId").value = btn.dataset.id;
+    document.getElementById("editRemarks").value = btn.dataset.remarks;
+    document.getElementById("editCode").value = btn.dataset.code;
+    document.getElementById("editQuantity").value = btn.dataset.quantity;
+    editPopup.style.display = "block";
+  });
+});
+
+closeEditPopupBtn.onclick = () => (editPopup.style.display = "none");
+cancelEditBtn.onclick = () => (editPopup.style.display = "none");
+
+window.onclick = (e) => {
+  if (e.target === addPopup) addPopup.style.display = "none";
+  if (e.target === editPopup) editPopup.style.display = "none";
+};
+
 openPopupBtn.onclick = () => {
   addPopup.style.display = "block";
 };
@@ -43,20 +65,20 @@ form.addEventListener("submit", function (e) {
 
     const newTable = document.createElement("table");
     newTable.innerHTML = `
-      <tr>
-        <th>New</th>
-        <th>
-          <div class="img-container">
-            <img src="${imageUrl}" width="80" alt="Image">
-          </div>
-        </th>
-        <th>${itemName}</th>
-        <th>${itemCode}</th>
-        <th>${quantity}</th>
-        <th><button onclick="alert('Delete action here')">Delete</button></th>
-        <th><button onclick="alert('Edit action here')">Edit</button></th>
-      </tr>
-    `;
+                <tr>
+                    <th>New</th>
+                    <th>
+                    <div class="img-container">
+                        <img src="${imageUrl}" width="80" alt="Image">
+                    </div>
+                    </th>
+                    <th>${itemName}</th>
+                    <th>${itemCode}</th>
+                    <th>${quantity}</th>
+                    <th><button onclick="alert('Delete action here')">Delete</button></th>
+                    <th><button onclick="alert('Edit action here')">Edit</button></th>
+                </tr>
+                `;
 
     bottomSegment.appendChild(newTable);
     form.reset();
