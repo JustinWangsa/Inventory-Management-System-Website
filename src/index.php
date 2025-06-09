@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TKUISA's Inventory</title>
   <link href="style.css" rel="stylesheet"/>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"/>
 </head>
 <body>
