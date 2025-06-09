@@ -6,7 +6,10 @@ if (isset($_POST['add'])) {
 
     $image = $_FILES['product_image']['name'];
     $image_tmp = $_FILES['product_image']['tmp_name'];
-    move_uploaded_file($image_tmp, "image/" . $image);
+
+    if (!empty($image_tmp)) {
+        move_uploaded_file($image_tmp, "image/" . $image);
+    }
 
     $product_code = mysqli_real_escape_string($conn, $_POST['product_code']);
     $product_remarks = mysqli_real_escape_string($conn, $_POST['product_remarks']);
@@ -17,12 +20,12 @@ if (isset($_POST['add'])) {
 
 
     if (mysqli_query($conn, $query)) {
-        echo "<script>alert('Successfully stored');</script>";
+        header("Location: index.php?status=success");
+        exit();
     } else {
-        echo "<script>alert('Something is wrong!');</script>";
+        echo "Error: " . mysqli_error($conn);
     }
+} else {
+    echo "Form not submitted properly.";
 }
-
-header("location: index.php");
-
 ?>
