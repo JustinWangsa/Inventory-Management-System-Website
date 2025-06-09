@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <!-- Right Side -->
     <div class="right">
       <h2>TKUISA</h2>
-      <p>Welcome!<br><small>Please enter your details below</small></p>
+      <p id="welcome-text">Welcome!<br><small>Please enter your details below</small></p>
 
       <form method="post">
         <label for="username">ID</label>
