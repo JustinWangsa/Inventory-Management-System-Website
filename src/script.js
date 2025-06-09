@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const addPopup = document.getElementById("addPopup");
 const openPopupBtn = document.getElementById("addBtn");
 const closePopupBtn = document.getElementById("closePopupBtn");
@@ -66,25 +65,3 @@ form.addEventListener("submit", function (e) {
 
   reader.readAsDataURL(imageFile);
 });
-=======
-// jangan di ganti ganti - bet
-
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
->>>>>>> 75ecea568353b0d1214b9ed43b7108e9b32bc3b9
