@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TKUISA's Inventory</title>
   <link href="style.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.php">
-  <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"/>
-
 </head>
-
 <body>
   <div class="container">
-     <div class="side_bar">
+    <div class="side_bar">
       <div class="side_top">
         <img src="image/main_logo.png" alt="TKUISA LOGO" />
         <p class="med_button">Inventory</p>
@@ -36,10 +32,10 @@
       </div>
 
       <div class="bottom_segment">
-        <table class="table">
+        <table>
           <thead>
-            <tr class="table_head">
-              <th>No</th>
+            <tr>
+              <th>No.</th>
               <th>Image</th>
               <th>Remarks</th>
               <th>Code</th>
@@ -77,45 +73,7 @@
         </table>
       </div>
     </div>
-    </div>
-</body>
-
-  <script>
-    const addPopup = document.getElementById("addPopup");
-    const openPopupBtn = document.getElementById("addBtn");
-    const closePopupBtn = document.getElementById("closePopupBtn");
-    const cancelBtn = document.getElementById("cancelBtn");
-
-    openPopupBtn.onclick = () => addPopup.style.display = "block";
-    closePopupBtn.onclick = () => addPopup.style.display = "none";
-    cancelBtn.onclick = () => addPopup.style.display = "none";
-
-    window.onclick = (e) => {
-      if (e.target === addPopup) addPopup.style.display = "none";
-    };
-
-    const editPopup = document.getElementById("editPopup");
-    const closeEditPopupBtn = document.getElementById("closeEditPopupBtn");
-    const cancelEditBtn = document.getElementById("cancelEditBtn");
-
-    document.querySelectorAll(".editBtn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.getElementById("editId").value = btn.dataset.id;
-        document.getElementById("editRemarks").value = btn.dataset.remarks;
-        document.getElementById("editCode").value = btn.dataset.code;
-        document.getElementById("editQuantity").value = btn.dataset.quantity;
-        editPopup.style.display = "block";
-      });
-    });
-
-    closeEditPopupBtn.onclick = () => editPopup.style.display = "none";
-    cancelEditBtn.onclick = () => editPopup.style.display = "none";
-
-    window.onclick = (e) => {
-      if (e.target === addPopup) addPopup.style.display = "none";
-      if (e.target === editPopup) editPopup.style.display = "none";
-    };
-  </script>
+  </div>
 
   <div class="popup" id="addPopup">
     <div class="popup_content">
@@ -145,6 +103,50 @@
           <input type="file" id="productImage" name="product_image" required />
         </div>
 
+                                <div class="add_popup_actions">
+                                    <button type="button" class="btn cancel_btn" id="cancelBtn" name="cancel">Cancel</button>
+                                    <button type="submit" class="btn add_btn" name="add">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+<div class="popup" id="editPopup">
+  <div class="popup_content">
+    <div class="popup_header">
+      <h2>Edit Item</h2>
+      <span class="popup_close" id="closeEditPopupBtn">&times;</span>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" action="update.php">
+      <input type="hidden" id="editId" name="id" />
+      <div class="form_group">
+        <label for="editRemarks">Item Name *</label>
+        <input type="text" id="editRemarks" name="product_remarks" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editCode">Item Code *</label>
+        <input type="text" id="editCode" name="product_code" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editQuantity">Quantity *</label>
+        <input type="number" id="editQuantity" name="product_quantity" min="1" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editImage">Change Image (optional)</label>
+        <input type="file" id="editImage" name="product_image" />
+      </div>
+      
+      <div class="add_popup_actions">
+        <button type="button" class="btn cancel_btn" id="cancelEditBtn">Cancel</button>
+        <button type="submit" class="btn add_btn" name="update">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
         <div class="add_popup_actions">
           <button type="button" class="btn cancel_btn" id="cancelBtn">Cancel</button>
           <button type="submit" class="btn add_btn" name="add">Add</button>
@@ -153,43 +155,120 @@
     </div>
   </div>
 
-  <div class="popup" id="editPopup">
-    <div class="popup_content">
-      <div class="popup_header">
-        <h2>Edit Item</h2>
-        <span class="popup_close" id="closeEditPopupBtn">&times;</span>
-      </div>
+                    <?php
+                        include('connect.php');
+                    ?>
 
-      <form method="POST" enctype="multipart/form-data" action="update.php">
-        <input type="hidden" id="editId" name="id" />
-        <div class="form_group">
-          <label for="editRemarks">Item Name *</label>
-          <input type="text" id="editRemarks" name="product_remarks" required />
-        </div>
+                    <?php 
+                        $sql = "SELECT * FROM items"; 
+                        $result = $conn->query($sql);
+                        $count = 0;
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()){
+                                $count++; ?>
 
-        <div class="form_group">
-          <label for="editCode">Item Code *</label>
-          <input type="text" id="editCode" name="product_code" required />
-        </div>
+                                <table>
+                                    <tr>
+                                        <th><?php echo $count ?></th>
+                                        <th>
+                                            <div class="img-container">
+                                                <img src="image/<?php echo $row["product_image"] ?>" width="80" alt="Image">
+                                            </div>
+                                        </th>
+                                        <th><?php echo $row["product_remarks"] ?></th>
+                                        <th><?php echo $row["product_code"] ?></th>
+                                        <th><?php echo $row["product_quantity"] ?></th>
+                                        <th>
+                                            <button onclick="if (confirm('Are you sure you want to delete this item?')) { window.location.href = 'delete.php?id=<?php echo $row['id']; ?>'; }">Delete</button>
+                                        </th>
+                                        <th>
+                                               <button class='editBtn' 
+                      data-id='".$row["id"]."'
+                      data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'
+                      data-code='" . $row["product_code"] . "'
+                      data-quantity='" . $row["product_quantity"] . "'
+                  >Edit</button>
+                                        </th>
+                                    </tr>
+                                </table>
 
-        <div class="form_group">
-          <label for="editQuantity">Quantity *</label>
-          <input type="number" id="editQuantity" name="product_quantity" min="1" required />
+                    <?php
+                            }   
+                        }   
+                    ?>
+                </div>
+            </div>
         </div>
-
-        <div class="form_group">
-          <label for="editImage">Change Image (optional)</label>
-          <input type="file" id="editImage" name="product_image" />
-        </div>
-        
-        <div class="add_popup_actions">
-          <button type="button" class="btn cancel_btn" id="cancelEditBtn">Cancel</button>
-          <button type="submit" class="btn add_btn" name="update">Update</button>
-        </div>
-      </form>
+        <script src="script.js"></script>
+    </body>
+<div class="popup" id="editPopup">
+  <div class="popup_content">
+    <div class="popup_header">
+      <h2>Edit Item</h2>
+      <span class="popup_close" id="closeEditPopupBtn">&times;</span>
     </div>
+    <form method="POST" enctype="multipart/form-data" action="update.php">
+      <input type="hidden" id="editId" name="id" />
+      <div class="form_group">
+        <label for="editRemarks">Item Name *</label>
+        <input type="text" id="editRemarks" name="product_remarks" required />
+      </div>
+      <div class="form_group">
+        <label for="editCode">Item Code *</label>
+        <input type="text" id="editCode" name="product_code" required />
+      </div>
+      <div class="form_group">
+        <label for="editQuantity">Quantity *</label>
+        <input type="number" id="editQuantity" name="product_quantity" min="1" required />
+      </div>
+      <div class="form_group">
+        <label for="editImage">Change Image (optional)</label>
+        <input type="file" id="editImage" name="product_image" />
+      </div>
+      <div class="add_popup_actions">
+        <button type="button" class="btn cancel_btn" id="cancelEditBtn">Cancel</button>
+        <button type="submit" class="btn add_btn" name="update">Update</button>
+      </div>
+    </form>
   </div>
+</div>
+
+
+  <script>
+    const addPopup = document.getElementById("addPopup");
+    const openPopupBtn = document.getElementById("addBtn");
+    const closePopupBtn = document.getElementById("closePopupBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    openPopupBtn.onclick = () => addPopup.style.display = "block";
+    closePopupBtn.onclick = () => addPopup.style.display = "none";
+    cancelBtn.onclick = () => addPopup.style.display = "none";
+
+    window.onclick = (e) => {
+      if (e.target === addPopup) addPopup.style.display = "none";
+    };
+
+      const editPopup = document.getElementById("editPopup");
+    const closeEditPopupBtn = document.getElementById("closeEditPopupBtn");
+    const cancelEditBtn = document.getElementById("cancelEditBtn");
+
+    document.querySelectorAll(".editBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("editId").value = btn.dataset.id;
+        document.getElementById("editRemarks").value = btn.dataset.remarks;
+        document.getElementById("editCode").value = btn.dataset.code;
+        document.getElementById("editQuantity").value = btn.dataset.quantity;
+        editPopup.style.display = "block";
+      });
+    });
+
+    closeEditPopupBtn.onclick = () => editPopup.style.display = "none";
+    cancelEditBtn.onclick = () => editPopup.style.display = "none";
+
+    window.onclick = (e) => {
+      if (e.target === addPopup) addPopup.style.display = "none";
+      if (e.target === editPopup) editPopup.style.display = "none";
+    };
+  </script>
 </body>
 </html>
-
-
