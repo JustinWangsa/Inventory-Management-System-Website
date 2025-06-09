@@ -103,6 +103,50 @@
           <input type="file" id="productImage" name="product_image" required />
         </div>
 
+                                <div class="add_popup_actions">
+                                    <button type="button" class="btn cancel_btn" id="cancelBtn" name="cancel">Cancel</button>
+                                    <button type="submit" class="btn add_btn" name="add">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+<div class="popup" id="editPopup">
+  <div class="popup_content">
+    <div class="popup_header">
+      <h2>Edit Item</h2>
+      <span class="popup_close" id="closeEditPopupBtn">&times;</span>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" action="update.php">
+      <input type="hidden" id="editId" name="id" />
+      <div class="form_group">
+        <label for="editRemarks">Item Name *</label>
+        <input type="text" id="editRemarks" name="product_remarks" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editCode">Item Code *</label>
+        <input type="text" id="editCode" name="product_code" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editQuantity">Quantity *</label>
+        <input type="number" id="editQuantity" name="product_quantity" min="1" required />
+      </div>
+
+      <div class="form_group">
+        <label for="editImage">Change Image (optional)</label>
+        <input type="file" id="editImage" name="product_image" />
+      </div>
+      
+      <div class="add_popup_actions">
+        <button type="button" class="btn cancel_btn" id="cancelEditBtn">Cancel</button>
+        <button type="submit" class="btn add_btn" name="update">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
         <div class="add_popup_actions">
           <button type="button" class="btn cancel_btn" id="cancelBtn">Cancel</button>
           <button type="submit" class="btn add_btn" name="add">Add</button>
@@ -111,6 +155,52 @@
     </div>
   </div>
 
+                    <?php
+                        include('connect.php');
+                    ?>
+
+                    <?php 
+                        $sql = "SELECT * FROM items"; 
+                        $result = $conn->query($sql);
+                        $count = 0;
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()){
+                                $count++; ?>
+
+                                <table>
+                                    <tr>
+                                        <th><?php echo $count ?></th>
+                                        <th>
+                                            <div class="img-container">
+                                                <img src="image/<?php echo $row["product_image"] ?>" width="80" alt="Image">
+                                            </div>
+                                        </th>
+                                        <th><?php echo $row["product_remarks"] ?></th>
+                                        <th><?php echo $row["product_code"] ?></th>
+                                        <th><?php echo $row["product_quantity"] ?></th>
+                                        <th>
+                                            <button onclick="if (confirm('Are you sure you want to delete this item?')) { window.location.href = 'delete.php?id=<?php echo $row['id']; ?>'; }">Delete</button>
+                                        </th>
+                                        <th>
+                                               <button class='editBtn' 
+                      data-id='".$row["id"]."'
+                      data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'
+                      data-code='" . $row["product_code"] . "'
+                      data-quantity='" . $row["product_quantity"] . "'
+                  >Edit</button>
+                                        </th>
+                                    </tr>
+                                </table>
+
+                    <?php
+                            }   
+                        }   
+                    ?>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 <div class="popup" id="editPopup">
   <div class="popup_content">
     <div class="popup_header">
