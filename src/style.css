@@ -121,6 +121,7 @@ body {
 .bottom_segment {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 #card-title {
@@ -179,10 +180,6 @@ body {
 .form_group label {
   display: block;
   margin-bottom: 5px;
-}
-
-.form_image {
-  /* create this one */
 }
 
 .form_group input[type="text"],

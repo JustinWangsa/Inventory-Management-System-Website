@@ -1,13 +1,15 @@
 <?php
-/*** set the content type header ***/
-/*** Without this header, it wont work ***/
-header("Content-type: text/css");
-
+    /*** set the content type header ***/
+    /*** Without this header, it wont work ***/
+    header("Content-type: text/css");
 ?>
 
+.tr_title {
+    background-color: #d9d9d9;
+}
 
 th {
-   border-radius: 100px;
+   padding: 10px 30px;
 }
 
 td {
