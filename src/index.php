@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TKUISA's Inventory</title>
   <link href="style.css" rel="stylesheet"/>
-  <link href="style.php" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"/>
 </head>
 <body>
@@ -13,7 +12,7 @@
     <div class="side_bar">
       <div class="side_top">
         <img src="image/main_logo.png" alt="TKUISA LOGO" />
-        <p class="med_button">Inventory</p>
+        <p>Inventory</p>
         <button class="med_button" id="addBtn">Add Item</button>
       </div>
 
@@ -29,22 +28,27 @@
           <span class="material-symbols-outlined">search</span>
           <input class="search_input" type="search" placeholder="Search for an item" />
         </div>
-        <button class="log_out">Log Out</button>
+        <button class="log_out" onclick="logout()">Log Out</button>
+        <script>
+          function logout() {
+            window.location.href = '../login.php';
+          }
+        </script>
       </div>
 
       <div class="bottom_segment">
-        <table>
-          <thead>
-            <tr class="tr_title">
-              <th>No.</th>
-              <th>Image</th>
-              <th>Remarks</th>
-              <th>Code</th>
-              <th>Quantity</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div class="table">
+          <div class="thead">
+            <div class="tr_title">
+              <p>No.</p>
+              <p>Image</p>
+              <p>Remarks</p>
+              <p>Code</p>
+              <p>Quantity</p>
+              <p>Modify</p>
+            </div>
+          </div>
+          <div class="tcontent">
             <?php
               include('connect.php');
               $sql = "SELECT * FROM items";
@@ -53,39 +57,39 @@
               if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                   if ($count % 2) {
-                    echo "<tr style='background-color: #f0f0eb'>";
-                    echo "<td>" . $count++ . "</td>";
-                    echo "<td><img src='image/" . $row["product_image"] . "' width='80' alt='Image'></td>";
-                    echo "<td>" . $row["product_remarks"] . "</td>";
-                    echo "<td>" . $row["product_code"] . "</td>";
-                    echo "<td>" . $row["product_quantity"] . "</td>";
-                    echo "<td>
-                            <button onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
-                            <button class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>
-                              Edit
-                            </button>
-                    </td>";
-                    echo "</tr>";
+  echo "            <div class='card' id='card_odd'>";
+  echo "              <p>" . $count++ . "</p>";
+  echo "              <p class='card_image'><img src='image/" . $row["product_image"] . "' alt='Image'></p>";
+  echo "              <p>" . $row["product_remarks"] . "</p>";
+  echo "              <p>" . $row["product_code"] . "</p>";
+  echo "              <p>" . $row["product_quantity"] . "</p>";
+  echo "              <p class='card_button'>
+                        <button id='cardButton' onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
+                        <button id='cardButton' class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>
+                          Edit
+                        </button>
+                      </p>";
+  echo "            </div>";
                   } else {
-                    echo "<tr style='background-color: #d9d9d9'>";
-                    echo "<td>" . $count++ . "</td>";
-                    echo "<td><img src='image/" . $row["product_image"] . "' width='80' alt='Image'></td>";
-                    echo "<td>" . $row["product_remarks"] . "</td>";
-                    echo "<td>" . $row["product_code"] . "</td>";
-                    echo "<td>" . $row["product_quantity"] . "</td>";
-                    echo "<td>
-                            <button onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
-                            <button class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>
-                              Edit
-                            </button>
-                    </td>";
-                    echo "</tr>";
+  echo "            <div class='card' id='card_even'>";
+  echo "              <p>" . $count++ . "</p>";
+  echo "              <p class='card_image' ><img src='image/" . $row["product_image"] . "'alt='Image'></p>";
+  echo "              <p>" . $row["product_remarks"] . "</p>";
+  echo "              <p>" . $row["product_code"] . "</p>";
+  echo "              <p>" . $row["product_quantity"] . "</p>";
+  echo "              <p class='card_button'>
+                        <button id='cardButton' onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
+                        <button id='cardButton' class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>
+                          Edit
+                        </button>
+                      </p>";
+  echo "            </div>";
                   }
                 }
               }
             ?>
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
