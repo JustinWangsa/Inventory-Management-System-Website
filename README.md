@@ -62,6 +62,7 @@ A web-based inventory management system for the TKUISA committee to organize and
   <li>Seann Bryan Timotius - https://www.linkedin.com/in/seann-bryan-timotius/ - seannbryanlin@gmail.com </li>
   <li>Bertrand Leonard Widjaksono - https://www.linkedin.com/in/BertrandLeonard/ - bertrandleonard736@gmail.com</li>
   <li>Jeffta Matthew - https://www.linkedin.com/in/jefftamatthew/ - jeffta804@gmail.com</li>
+  <li>Yehuda Kristiawan Putra - https://www.linkedin.com/in/yehuda-kristiawan-putra/ - yehuda.kristiawan@gmail.com</li>
 
 </ul>
 
