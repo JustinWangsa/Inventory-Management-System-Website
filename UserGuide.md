@@ -41,7 +41,7 @@ The homepage (`index.php`) displays a table of all current inventory items, incl
 ### Adding a New Item
 
 1. Click the **"Add"** button.
-2. Fill in the item details (e.g., name, quantity).
+2. Fill in the item details (e.g., Remarks, quantity).
 3. Click **Submit** to save the new item.
 
 ### Editing an Existing Item
