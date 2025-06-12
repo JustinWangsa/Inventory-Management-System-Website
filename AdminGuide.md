@@ -50,5 +50,4 @@ For detailed setup instructions — including software installation, file placem
 ## Security Tips
 
 * Change default MariaDB password.
-* Restrict access to `connect.php` using `.htaccess` or permissions.
 * Regularly backup your database.
