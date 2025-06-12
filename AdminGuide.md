@@ -6,7 +6,7 @@ Welcome to the **Tkuisa inventory management Admin Guide**. This guide is intend
 
 ## System Overview
 
-This web-based inventory system helps you manage item entries (add, edit, and delete). It's built using PHP, CSS, JavaScript, and a MariaDB database.
+This system is a lightweight, web-based inventory management tool designed to help administrators oversee and control item records in a centralized database. It allows for easy modification of records (add, edit, delete), supports data sorting, and is built using PHP for backend processing, MariaDB for database handling, and JavaScript/CSS for frontend interaction.
 
 ---
 
@@ -20,7 +20,7 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 │   ├── edit.php        # Edit item details
 │   ├── index.php       # Main interface
 │   ├── inventory.sql   # Database schema
-│   ├── script.js       # JavaScript for front-end
+│   ├── script.js       # JavaScript 
 │   ├── style.css       # Basic styling
 │   ├── update.php      # Update item details
 ```
@@ -28,7 +28,7 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 ---
 
 ## Deployment 
-The inventory system is deployed and hosted on a Raspberry Pi device using Apache, PHP, and MariaDB.
+The inventory system is deployed and hosted on a Raspberry Pi device using Apache2, PHP, and MariaDB.
 
 ### Requirements
 
@@ -36,7 +36,7 @@ The inventory system is deployed and hosted on a Raspberry Pi device using Apach
 * Apache2 + PHP
 * MariaDB server
 
-For detailed setup instructions — including software installation, file placement, and database import — please refer to the [installation.md](./installation.md) file.
+For detailed setup instructions including software installation, file placement, and database import, please refer to the [installation.md](./installation.md) file.
 
 ## Admin Operations
 
