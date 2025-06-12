@@ -1,6 +1,6 @@
 # Admin Guide
 
-Welcome to the **Inventory Management Admin Guide**. This guide is intended for administrators who manage and maintain the system, hosted on a **Raspberry Pi** server.
+Welcome to the **Tkuisa inventory management Admin Guide**. This guide is intended for administrators who manage and maintain the system, hosted on a **Raspberry Pi** server.
 
 ---
 
@@ -27,7 +27,8 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 
 ---
 
-## Deployment (Raspberry Pi)
+## Deployment 
+The inventory system is deployed and hosted on a Raspberry Pi device using Apache, PHP, and MariaDB.
 
 ### Requirements
 
@@ -35,48 +36,7 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 * Apache2 + PHP
 * MariaDB server
 
-### Setup Steps
-
-1. **Install Apache, PHP, and MariaDB:**
-
-```bash
-sudo apt update
-sudo apt install apache2 php mariadb-server php-mysql
-```
-
-2. **Clone or copy project files:**
-
-```bash
-sudo cp -r /home/pi/inventory-system /var/www/html/inventory
-```
-
-3. **Set file permissions:**
-
-```bash
-sudo chown -R www-data:www-data /var/www/html/inventory
-```
-
-4. **Import the database:**
-
-```bash
-sudo mysql -u root -p
-MariaDB [(none)]> CREATE DATABASE inventory;
-MariaDB [(none)]> USE inventory;
-MariaDB [inventory]> SOURCE /var/www/html/inventory/src/inventory.sql;
-```
-
-5. **Configure database connection in ****`connect.php`****:**
-
-```php
-$servername = "localhost";
-$username = "root";
-$password = "Password";
-$dbname = "inventory";
-```
-
-6. **Access the app:**
-
----
+For detailed setup instructions — including software installation, file placement, and database import — please refer to the [installation.md](./installation.md) file.
 
 ## Admin Operations
 
@@ -92,20 +52,3 @@ $dbname = "inventory";
 * Change default MariaDB password.
 * Restrict access to `connect.php` using `.htaccess` or permissions.
 * Regularly backup your database.
-
----
-
-## 🛠 Maintenance Tips
-
-* Backup `inventory.sql` regularly:
-
-```bash
-mysqldump -u root -p inventory > backup_inventory.sql
-```
-
-* Log errors to diagnose problems: `error_log` in `/var/log/apache2/`
-
----
-
-
----
