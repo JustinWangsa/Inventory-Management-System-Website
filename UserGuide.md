@@ -12,7 +12,7 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 
 ## Table of Contents
 
-1. [System Overview ](#System Overview)
+1. [System Overview](#System-Overview)
 2. [Accessing the System](#accessing-the-system)
 3. [Using the Inventory Interface](#using-the-inventory-interface)
    * [Viewing Items](#viewing-items)
