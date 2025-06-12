@@ -65,4 +65,4 @@ The homepage (`index.php`) displays a table of all current inventory items, incl
 * **Error connecting to database?** Contact the system administrator to verify database connectivity.
 * **Changes not saving?** Refresh the page and try again, or check for input validation issues.
 
----
+
