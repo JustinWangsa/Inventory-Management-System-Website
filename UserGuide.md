@@ -1,19 +1,43 @@
-Login
-Only authorized committee members can log in.
+# Admin Guide
 
-Viewing Inventory
-See a list of all items, including descriptions, categories, and status.
+## Introduction
 
-Adding/Editing/Deleting Items
-Use the “+ Add Item” button to input new inventory.
+This guide provides information for administrators on managing [Your Project Name].
 
-Click an item to edit or remove it.
+## Table of Contents
 
-Upload a picture for visual reference.
+- [Installation Instructions](#installation-instructions)
+- [Usage Guidelines](#usage-guidelines)
+- [Developer Manual](#developer-manual)
 
-Categories
-Create and assign custom tags to group items (e.g., "Decoration", "Audio", "Documents").
+## Installation Instructions
 
-Searching
-Use the search bar to find items by name, category, or status.
+...
 
+## Usage Guidelines
+
+...
+
+## Developer Manual
+
+### Introduction
+
+Welcome to the Developer Manual for [Your Project Name]. This document provides guidelines for setting up the development environment, contributing to the project, and understanding the codebase.
+
+### Table of Contents
+
+- [Installation Instructions](#installation-instructions-1)
+- [Usage Guidelines](#usage-guidelines-1)
+- [API Documentation](#api-documentation)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [License Information](#license-information)
+
+### Installation Instructions
+
+To get started with [Your Project Name], follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/yourproject.git
+   cd yourproject
