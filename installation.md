@@ -84,10 +84,10 @@ This document describes how to install and run the TKUISA Inventory Management S
    sudo apt mysql_secure_installation
    ```
 
-   when prompet press **Enter** for the current root password.
-   choose **Y** to set the root password.
-   enter `password` when prompted 
-   answer the rest of prompts as preffered.
+   * when prompet press **Enter** for the current root password.
+   * choose **Y** to set the root password.
+   * enter `password` when prompted 
+   * answer the rest of prompts as preffered.
    
 
 5. **Copy or clone project files** to:
@@ -156,9 +156,8 @@ This document describes how to install and run the TKUISA Inventory Management S
    hostname -I
    ```
 
-   it will output the Ip address
-
-   then open the Ip address to your system browser
+   * it will output the Ip address
+   * then open the Ip address to your system browser
    ```
    http://(your Ip address)/
    ```  
