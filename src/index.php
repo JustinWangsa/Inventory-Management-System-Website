@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <title>TKUISA's Inventory</title>
   <link href="style.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"/>
@@ -58,11 +58,11 @@
                 while ($row = $result->fetch_assoc()) {
                   if ($count % 2) {
   echo "            <div class='card' id='card_odd'>";
-  echo "              <p>" . $count++ . "</p>";
+  echo "              <p class='card_text'>" . $count++ . "</p>";
   echo "              <p class='card_image'><img src='image/" . $row["product_image"] . "' alt='Image'></p>";
-  echo "              <p>" . $row["product_remarks"] . "</p>";
-  echo "              <p>" . $row["product_code"] . "</p>";
-  echo "              <p>" . $row["product_quantity"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_remarks"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_code"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_quantity"] . "</p>";
   echo "              <p class='card_button'>
                         <button id='cardButton' onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
                         <button id='cardButton' class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>
@@ -72,11 +72,11 @@
   echo "            </div>";
                   } else {
   echo "            <div class='card' id='card_even'>";
-  echo "              <p>" . $count++ . "</p>";
+  echo "              <p class='card_text'>" . $count++ . "</p>";
   echo "              <p class='card_image' ><img src='image/" . $row["product_image"] . "'alt='Image'></p>";
-  echo "              <p>" . $row["product_remarks"] . "</p>";
-  echo "              <p>" . $row["product_code"] . "</p>";
-  echo "              <p>" . $row["product_quantity"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_remarks"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_code"] . "</p>";
+  echo "              <p class='card_text'>" . $row["product_quantity"] . "</p>";
   echo "              <p class='card_button'>
                         <button id='cardButton' onclick=\"if(confirm('Delete this item?')) window.location.href='delete.php?id=" . $row["id"] . "';\">Delete</button>
                         <button id='cardButton' class='editBtn' data-id='" . $row["id"] . "'data-remarks='" . htmlspecialchars($row["product_remarks"], ENT_QUOTES) . "'data-code='" . $row["product_code"] . "'data-quantity='" . $row["product_quantity"] . "'>

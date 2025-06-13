@@ -167,7 +167,8 @@ body {
 }
 
 .tr_title p {
-  box-sizing: border-box;
+  text-align: center;
+  width: 180px;
 }
 
 .tcontent {
@@ -180,14 +181,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* gap: 0px; */
   align-items: center;
   height: 200px;
   overflow: hidden;
   border-bottom: 1px solid #aaa;
-}
-
-.card_content {
 }
 
 #card_odd {
@@ -198,12 +195,11 @@ body {
   background-color: #d9d9d9;
 }
 
-.card p {
-  /* box-sizing: border-box;
-  margin: 0px; */
+.card_text {
+  align-content: center;
   text-align: center;
-  /* padding: 30px;
-  margin-left: 70px; */
+  width: 180px;
+  height: 180px;
 }
 
 #card_image {
