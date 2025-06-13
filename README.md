@@ -6,15 +6,11 @@
 -->
 
 
-[![Contributors][contributors-shield]][contributors-url]
+[![Contributors][contributors-shield](contributors-url)]
 
 
-<!-- PROJECT LOGO -->
-
+<br />
 <div align="center">
-  <!-- <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
 
   <h4 align="center">README</h4>
 
@@ -24,10 +20,7 @@
 </div>
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 A web-based inventory management system for the TKUISA committee to organize and monitor organizational items across different generations.
 
@@ -37,9 +30,6 @@ A web-based inventory management system for the TKUISA committee to organize and
 3. Add/edit/delete inventory items with images and descriptions
 4. Categorize items using custom tags
 5. Search functionality for quick lookup
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -51,28 +41,17 @@ A web-based inventory management system for the TKUISA committee to organize and
 * ![MariaDB][mariadb.js]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>  
-
-
-
-<!-- CONTACT -->
 ## Contact
 <ul>
-  <li>Justin Wangsa - https://www.linkedin.com/in/justinwangsa/ - justinwangsa9@gmail.com </li>
-  <li>Seann Bryan Timotius - https://www.linkedin.com/in/seann-bryan-timotius/ - seannbryanlin@gmail.com </li>
-  <li>Bertrand Leonard Widjaksono - https://www.linkedin.com/in/BertrandLeonard/ - bertrandleonard736@gmail.com</li>
-  <li>Jeffta Matthew - https://www.linkedin.com/in/jefftamatthew/ - jeffta804@gmail.com</li>
-
+  <li>Justin Wangsa - [@Justinwangsa](https://www.linkedin.com/in/justinwangsa/) - justinwangsa9@gmail.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
+  <li>Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com </li>
 </ul>
 
 Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.com/JustinWangsa/opensource-final)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/JustinWangsa/opensource-final?style=for-the-badge
 [contributors-url]: https://github.com/JustinWangsa/opensource-final/graphs/contributors
@@ -80,7 +59,7 @@ Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.
 [product-screenshot]: images/screenshot.png
 
 [php.js]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white
-[javascript.js]: https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square
+[javascript.js]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white
 [mariadb.js]: https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
 [html.js]: https://shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529
 [css.js]: https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white

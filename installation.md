@@ -38,7 +38,7 @@ This document describes how to install and run the TKUISA Inventory Management S
 8. Open your browser and go to:
 
    ```
-   http://localhost/inventory
+   http://localhost/opensource-final
    ```
 
    You should now see the inventory system running.
@@ -77,6 +77,18 @@ This document describes how to install and run the TKUISA Inventory Management S
    ```bash
    sudo apt install mariadb-server
    ```
+   
+   secure mariaDB and set root password:
+
+   ```bash
+   sudo apt mysql_secure_installation
+   ```
+
+   when prompet press **Enter** for the current root password.
+   choose **Y** to set the root password.
+   enter `password` when prompted 
+   answer the rest of prompts as preffered.
+   
 
 5. **Copy or clone project files** to:
 
@@ -124,12 +136,29 @@ This document describes how to install and run the TKUISA Inventory Management S
    SOURCE /var/www/html/inventory/src/inventory.sql;
    ```
 
-9. **Access the system** in your browser:
+9. **update database connection file**
+   ```   
+      sudo nano /var/www/html/inventory/connect.php
+   ```
+   modify the passowrd line: 
+   ```
+   <?php
+   $servername = "localhost";
+   $username = "root";
+   $password = "password";
+   $dbname = "inventory";
+   ```
+   save and exit (`Crtl + x`, `y`, `Enter`)
+
+10. **Access the system** in your browser:
 
    ```
-   http://<raspberry-pi-ip>/inventory
+   hostname -I
    ```
 
----
+   it will output the Ip address
 
-If you encounter issues, please refer to the [Admin Guide](./AdminGuide.md) or contact your system administrator.
+   then open the Ip address to your system browser
+   ```
+   http://(your Ip address)/
+   ```  
