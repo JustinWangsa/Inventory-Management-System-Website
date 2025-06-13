@@ -39,6 +39,32 @@ body {
   color: var(--text-color);
 }
 
+.btnContainer {
+  width: 100%;
+  margin: 30px 0 50px 50px;
+}
+
+.backBtn {
+  padding: 8px 50px;
+  color: #ffffff;
+  background: #570000;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.backBtn:hover {
+  background-color: #380000;
+}
+
+.title h1 {
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -47,7 +73,8 @@ img {
 
 /*CARD*/
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
   min-height: 100vh;      /* Full viewport height */
   margin-inline: 0;       /* Remove side margin */
@@ -57,7 +84,7 @@ img {
 .card_container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 2rem;
+  column-gap: 1.5rem;
   row-gap: 0;
   justify-items: center;
 }
@@ -68,7 +95,7 @@ img {
 }
 
 .card_img {
-  width: 328px;
+  width: 280px;
   border-radius: 1.5rem;
 }
 

@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="aboutstyle.css" />
+    <link rel="stylesheet" href="about.css" />
 
     <title>About responsive card</title>
   </head>
   <body>
     <div class="container">
+      <div class="btnContainer">
+        <button class="backBtn" onclick="back()">Back</button>
+      </div>
+      <script>
+        function back() {
+          window.location.href = 'index.php'
+        }
+      </script>
+      <div class="title">
+        <h1>Meet the team</h1>
+      </div>
       <div class="card_container">
         <article class="card_article">
           <img

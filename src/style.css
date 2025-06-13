@@ -63,6 +63,10 @@ body {
   margin-bottom: var(--bottom_margin);
 }
 
+.med_button:hover {
+  background-color: #380000;
+}
+
 .side_bottom {
   display: flex;
   flex-direction: column;
@@ -130,6 +134,10 @@ body {
   font-weight: 700;
   border-radius: 30px;
   margin-bottom: 20px;
+}
+
+.log_out:hover {
+  background-color: #380000;
 }
 
 .bottom_segment {
