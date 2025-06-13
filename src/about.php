@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/src/aboutstyle.css" />
+    <link rel="stylesheet" href="aboutstyle.css" />
 
     <title>About responsive card</title>
   </head>
@@ -13,7 +13,7 @@
       <div class="card_container">
         <article class="card_article">
           <img
-            src="/about/0877150_PE662352_S4.png"
+            src="image/ber.png"
             alt="image"
             class="card_img"
           />
@@ -27,7 +27,7 @@
 
         <article class="card_article">
           <img
-            src="/about/0877150_PE662352_S4.png"
+            src="image/jep.png"
             alt="image"
             class="card_img"
           />
@@ -41,7 +41,7 @@
 
         <article class="card_article">
           <img
-            src="/about/0877150_PE662352_S4.png"
+            src="image/tin.png"
             alt="image"
             class="card_img"
           />
@@ -55,13 +55,13 @@
 
         <article class="card_article">
           <img
-            src="/about/0877150_PE662352_S4.png"
+            src="image/se.png"
             alt="image"
             class="card_img"
           />
 
           <div class="card_data">
-            <span class="card_description">Fullstack Developer</span>
+            <span class="card_description">Front-End Developer</span>
             <h2 class="card_title">Seann Bryan</h2>
             <a href="https://www.linkedin.com/in/seann-bryan-timotius/" class="card_button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
@@ -69,7 +69,7 @@
 
         <article class="card_article">
           <img
-            src="/about/0877150_PE662352_S4.png"
+            src="image/ye.png"
             alt="image"
             class="card_img"
           />

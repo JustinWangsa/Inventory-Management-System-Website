@@ -17,6 +17,12 @@
       </div>
 
       <div class="side_bottom">
+        <button class="med_button" onclick="about()">About</button>
+        <script>
+          function about() {
+            window.location.href = 'about.php'
+          }
+        </script>
         <p>coded and designed by</p>
         <p id="Bold">ASEP STROBERI</p>
       </div>
