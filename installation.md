@@ -132,8 +132,6 @@ This document describes how to install and run the TKUISA Inventory Management S
    ```bash
    sudo mysql -u root -p
    CREATE DATABASE inventory;
-   USE inventory;
-   SOURCE /var/www/html/inventory/src/inventory.sql;
    ```
 
 9. **update database connection file**

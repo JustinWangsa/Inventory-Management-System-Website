@@ -15,11 +15,25 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 1. [System Overview](#System-Overview)
 2. [Accessing the System](#accessing-the-system)
 3. [Using the Inventory Interface](#using-the-inventory-interface)
+
    * [Viewing Items](#viewing-items)
    * [Adding a New Item](#adding-a-new-item)
    * [Editing an Existing Item](#editing-an-existing-item)
    * [Deleting an Item](#deleting-an-item)
 4. [Troubleshooting](#troubleshooting)
+
+---
+
+## Accessing the System
+
+To access the inventory system, open your browser and navigate to the system URL (e.g., `http://localhost/opensource-final` or your Raspberry Pi's IP address).
+
+### Default Login Credentials
+
+* **Username:** user
+* **Password:** user123
+
+If you would like to change the password, you can do so by updating it directly in the `inventory` database using phpMyAdmin or the SQL command line.
 
 ---
 
@@ -55,5 +69,3 @@ The homepage (`index.php`) displays a table of all current inventory items, incl
 * **Page not loading?** Make sure your device is connected to the local network and the Raspberry Pi is powered on.
 * **Error connecting to database?** Contact the system administrator to verify database connectivity.
 * **Changes not saving?** Refresh the page and try again, or check for input validation issues.
-
-
