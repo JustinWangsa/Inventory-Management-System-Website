@@ -23,15 +23,6 @@ This web-based inventory system helps you manage item entries (add, edit, and de
 
 ---
 
-
-## Accessing the System
-
-To access the system:
-
-1. 
-
----
-
 ## Using the Inventory Interface
 
 ### Viewing Items

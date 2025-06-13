@@ -1,20 +1,9 @@
-
 <a id="readme-top"></a>
-
-<!--
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 
 [![Contributors][contributors-shield]][contributors-url]
 
-
 <!-- PROJECT LOGO -->
-
 <div align="center">
-  <!-- <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
 
   <h4 align="center">README</h4>
 
@@ -23,11 +12,8 @@
   </h1>
 </div>
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 A web-based inventory management system for the TKUISA committee to organize and monitor organizational items across different generations.
 
@@ -38,9 +24,6 @@ A web-based inventory management system for the TKUISA committee to organize and
 4. Categorize items using custom tags
 5. Search functionality for quick lookup
 
-
-
-
 ### Built With
 
 * ![HTML][html.js]
@@ -48,7 +31,6 @@ A web-based inventory management system for the TKUISA committee to organize and
 * ![PHP][php.js]
 * ![Javascript][javascript.js]
 * ![MariaDB][mariadb.js]
-
 
 <!-- CONTACT -->
 ## Contact
@@ -62,6 +44,7 @@ A web-based inventory management system for the TKUISA committee to organize and
 </ul>
 
 Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.com/JustinWangsa/opensource-final)
+
 
 
 
