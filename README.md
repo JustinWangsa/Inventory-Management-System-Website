@@ -43,7 +43,7 @@ A web-based inventory management system for the TKUISA committee to organize and
 
 </ul>
 
-Project Link: [https://github.com/JustinWangsa/opensource-final](https://github.com/JustinWangsa/opensource-final)
+Project Link: [https://github.com/JustinWangsa/opensource-final]([https://github.com/JustinWangsa/Inventory-Management-System-Website])
 
 
 
